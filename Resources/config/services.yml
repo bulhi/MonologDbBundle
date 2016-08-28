@@ -1,0 +1,4 @@
+services:
+#    bulhi_monolog_db.example:
+#        class: Bulhi\MonologDbBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

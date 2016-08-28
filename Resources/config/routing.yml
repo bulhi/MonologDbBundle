@@ -1,0 +1,3 @@
+bulhi_monolog_db_homepage:
+    path:     /
+    defaults: { _controller: BulhiMonologDbBundle:Default:index }
