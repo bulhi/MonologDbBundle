@@ -10,14 +10,14 @@ Monolog (included in Symfony out of the box) & FOS User Bundle.
 
 config.yml
 
-monolog:
-    channels: ['db_log']
+    monolog:
+        channels: ['db_log']
 
-    handlers:
-        db_log_handler:
-            type: service
-            id: bulhi_monolog_db.log_handler
-            channels: [db_log]
+        handlers:
+            db_log_handler:
+                type: service
+                id: bulhi_monolog_db.log_handler
+                channels: [db_log]
 
 ## database
 
@@ -25,18 +25,17 @@ If your project uses Doctrine migrations(doctrine/doctrine-migrations-bundle), y
 
 Otherwise create the table manually, e.g. for MySQL:
 
-CREATE TABLE `log_entry` (
-    `id` int(11) NOT NULL AUTO_INCREMENT,
-    `user_id` int(11) DEFAULT NULL,
-    `level` smallint(5) UNSIGNED NOT NULL,
-    `message` longtext COLLATE utf8_unicode_ci NOT NULL,
-    `created_at` datetime NOT NULL,
-    PRIMARY KEY (`id`),
-    KEY `IDX_B5F762DA76ED395` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+    CREATE TABLE `log_entry` (
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        `user_id` int(11) DEFAULT NULL,
+        `level` smallint(5) UNSIGNED NOT NULL,
+        `message` longtext COLLATE utf8_unicode_ci NOT NULL,
+        `created_at` datetime NOT NULL,
+        PRIMARY KEY (`id`),
+        KEY `IDX_B5F762DA76ED395` (`user_id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-ALTER TABLE `log_entry`
-  ADD CONSTRAINT `FK_B5F762DA76ED395` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+    ALTER TABLE `log_entry` ADD CONSTRAINT `FK_B5F762DA76ED395` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 Change names of 'users' table and the FK constraint accordingly, if needed.
 
@@ -46,5 +45,5 @@ Obtain Monolog service corresponding to the configured channel from the containe
 
 E.g. in the controller:
 
-$logger = $this->get('monolog.logger.db_log');
-$logger->info('Just logged some valuable info');
+    $logger = $this->get('monolog.logger.db_log');
+    $logger->info('Just logged some valuable info');
