@@ -20,9 +20,13 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('bulhi_monolog_db');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        // Define the parameter that allows to configure name of used User entity class
+        $rootNode
+            ->children()
+                ->scalarNode('user_class')
+                    ->isRequired()
+                    ->cannotBeEmpty()
+                ->end();
 
         return $treeBuilder;
     }

@@ -8,7 +8,13 @@ Monolog (included in Symfony out of the box) & FOS User Bundle.
 
 ## required settings:
 
-config.yml
+Activate bundle in AppKernel::registerBundles() method
+    
+    ...
+    new Bulhi\MonologDbBundle\BulhiMonologDbBundle(),
+    ...
+
+Define custom monolog channel in config.yml file. Name of the channel ('db_log' here) can be set to whatever you like. Also define the name of user entity in your app.
 
     monolog:
         channels: ['db_log']
@@ -19,7 +25,10 @@ config.yml
                 id: bulhi_monolog_db.log_handler
                 channels: [db_log]
 
-routing.yml
+    bulhi_monolog_db:
+        user_class: 'AppBundle\Entity\User'
+
+Import bundle routes in routing.yml
     
     bulhi_monolog_db:
         resource: "@BulhiMonologDbBundle/Resources/config/routing.yml"

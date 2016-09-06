@@ -39,7 +39,8 @@ class LogEntry
     /**
      * User who triggered the action which created the log entry.
      * 
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
+     * This association is configured dynamically, see:
+     * Bulhi\MonologDbBundle\EventSubscriber\EntityMetadataSubscriber
      */
     protected $user;
 

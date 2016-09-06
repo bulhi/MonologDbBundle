@@ -22,6 +22,9 @@ class BulhiMonologDbExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
+        // TODO: is there any way how to access config value directly, without transforming it into parameter like this?
+        $container->setParameter( 'bulhi_monolog_db.user_class', $config[ 'user_class' ] );
+
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
     }
