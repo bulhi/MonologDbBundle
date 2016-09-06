@@ -19,11 +19,21 @@ config.yml
                 id: bulhi_monolog_db.log_handler
                 channels: [db_log]
 
+routing.yml
+    
+    bulhi_monolog_db:
+        resource: "@BulhiMonologDbBundle/Resources/config/routing.yml"
+        prefix:   /log
+
 ## database
 
 If your project uses Doctrine migrations(doctrine/doctrine-migrations-bundle), you can simply run migration diff, because LogEntry exists as a standard entity.
 
-Otherwise create the table manually, e.g. for MySQL:
+Another option is to use the console command
+    
+    php bin/console doctrine:schema:update --force
+
+Or just create the table manually, e.g. for MySQL:
 
     CREATE TABLE `log_entry` (
         `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -37,7 +47,7 @@ Otherwise create the table manually, e.g. for MySQL:
 
     ALTER TABLE `log_entry` ADD CONSTRAINT `FK_B5F762DA76ED395` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
-Change names of 'users' table and the FK constraint accordingly, if needed.
+(change names of 'users' table and the FK constraint accordingly, if needed)
 
 ## usage
 
