@@ -10,6 +10,15 @@ use Doctrine\ORM\Mapping as ORM;
 class LogEntry
 {
 
+    const LEVEL_DEBUG = 100;
+    const LEVEL_INFO = 200;
+    const LEVEL_NOTICE = 250;
+    const LEVEL_WARNING = 300;
+    const LEVEL_ERROR = 400;
+    const LEVEL_CRITICAL = 500;
+    const LEVEL_ALERT = 550;
+    const LEVEL_EMERGENCY = 600;
+
     /**
      * @ORM\Column(type="integer")
      * @ORM\Id

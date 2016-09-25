@@ -21,7 +21,7 @@
                     {% for entry in entries %}
 
                         <tr>
-                            <td>{# <span class="label label-{{ label_class }}">{{ entry.readableLevel|trans }}</span> #}</td>
+                            <td><span class="label label-{{ entry.level }}">{{ entry.level|trans }}</span></td>
                             <td>
                                 {% if entry.message|length > 150 %}
                                     {{ entry.message[0:150] }} &hellip;
