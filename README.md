@@ -14,7 +14,8 @@ Activate bundle in AppKernel::registerBundles() method
     new Bulhi\MonologDbBundle\BulhiMonologDbBundle(),
     ...
 
-Define custom monolog channel in config.yml file. Name of the channel ('db_log' here) can be set to whatever you like. Also define the name of user entity in your app.
+Define custom monolog channel in config.yml file. Name of the channel ('db_log' here) can be set to whatever you like.
+Also create a 'bulhi_monolog_db' section and provide the name of user entity in your app.
 
     monolog:
         channels: ['db_log']
