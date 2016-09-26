@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-09-26T00:07:13Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="4c4df0eb64c2c4dd6bfad59d1638c56cbb0b953e" resname="common.list.no_items">
+        <source>common.list.no_items</source>
+        <target>No log entries found</target>
+        <jms:reference-file line="45">\..\..\..\..\D:/www/symfonyTst/app/../src/Bulhi\MonologDbBundle\Resources\views\Log\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4cebced36074658b3ad1bf5beaff398229f9cff1" resname="log_ui.list.actions">
+        <source>log_ui.list.actions</source>
+        <target>Actions</target>
+        <jms:reference-file line="20">\..\..\..\..\D:/www/symfonyTst/app/../src/Bulhi\MonologDbBundle\Resources\views\Log\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e2f66261846f2db0e132f0922baf0a43666ba338" resname="log_ui.list.created_at">
+        <source>log_ui.list.created_at</source>
+        <target>Created At</target>
+        <jms:reference-file line="18">\..\..\..\..\D:/www/symfonyTst/app/../src/Bulhi\MonologDbBundle\Resources\views\Log\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="535cd42896328b8a53b9e37d8ae271db44cee328" resname="log_ui.list.level">
+        <source>log_ui.list.level</source>
+        <target>Level</target>
+        <jms:reference-file line="16">\..\..\..\..\D:/www/symfonyTst/app/../src/Bulhi\MonologDbBundle\Resources\views\Log\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b01e47890307ff9b2bb85e64eadd797f29bf2f8f" resname="log_ui.list.message">
+        <source>log_ui.list.message</source>
+        <target>Message</target>
+        <jms:reference-file line="17">\..\..\..\..\D:/www/symfonyTst/app/../src/Bulhi\MonologDbBundle\Resources\views\Log\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d735292b7bbea2c7c50ef09a3680d42963b4c61e" resname="log_ui.list.user">
+        <source>log_ui.list.user</source>
+        <target>User</target>
+        <jms:reference-file line="19">\..\..\..\..\D:/www/symfonyTst/app/../src/Bulhi\MonologDbBundle\Resources\views\Log\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6eb7269e2ff9f7d06893acebf169957f8fc79832" resname="page_title">
+        <source>page_title</source>
+        <target>System Log</target>
+        <jms:reference-file line="7">\..\..\..\..\D:/www/symfonyTst/app/../src/Bulhi\MonologDbBundle\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
